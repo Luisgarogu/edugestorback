@@ -9,9 +9,6 @@ import org.hibernate.annotations.ValueGenerationType;
 
 @Entity
 @Table(name = "calificacion")
-@Data
-@AllArgsConstructor
-@NoArgsConstructor
 
 public class Calificacion {
 
@@ -25,4 +22,37 @@ public class Calificacion {
     @OneToOne
     @JoinColumn(name = "id_matricula")
     private Matricula matricula;
+
+    public Calificacion(Long id_calificacion, Double nota, Matricula matricula) {
+        this.id_calificacion = id_calificacion;
+        this.nota = nota;
+        this.matricula = matricula;
+    }
+
+    public Calificacion() {
+    }
+
+    public Long getId_calificacion() {
+        return id_calificacion;
+    }
+
+    public void setId_calificacion(Long id_calificacion) {
+        this.id_calificacion = id_calificacion;
+    }
+
+    public Double getNota() {
+        return nota;
+    }
+
+    public void setNota(Double nota) {
+        this.nota = nota;
+    }
+
+    public Matricula getMatricula() {
+        return matricula;
+    }
+
+    public void setMatricula(Matricula matricula) {
+        this.matricula = matricula;
+    }
 }
