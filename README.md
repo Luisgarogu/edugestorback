@@ -24,6 +24,11 @@ Esto iniciará el servidor de desarrollo de React en [http://localhost:3000](htt
 ### Backend (Spring Boot)
 Para ejecutar el backend de la aplicación, sigue estos pasos:
 
+ANTES DE EJECUTAR EL PROYECTO DE JAVA ASEGURESE DE TENER UNA BASE DE DATOS CON EL NOMBRE: 
+ edugestorft_db1 
+
+Luego en su IDE de preferencia:
+
 1. Navega hasta el directorio del proyecto backend:
 
 cd edugestorback
@@ -40,7 +45,8 @@ Ejecuta el Main -DemoApplication
 El backend estará disponible en [http://localhost:8080](http://localhost:8080).
 
 
-SCRIPTS: 
+SCRIPTS DE EJECUCION EN LA BASE DE DATOS:
+
 
 INSERT INTO pais (pais) VALUES
 ('CO'),
