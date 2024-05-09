@@ -21,12 +21,6 @@ npm start
 
 Esto iniciará el servidor de desarrollo de React en [http://localhost:3000](http://localhost:3000), donde podrás ver la aplicación en tu navegador.
 
-SCRIPTS:
-
-INSERT INTO pais (pais) VALUES ('CO'), ('AD'), ('AF'), ('BR'), ('CD'), ('CF'), ('CG'), ('KR'), ('KZ'), ('LA');
-
-INSERT INTO rol (nombre) VALUES ('rector'), ('estudiante'), ('profesor')
-
 ### Backend (Spring Boot)
 Para ejecutar el backend de la aplicación, sigue estos pasos:
 
@@ -44,6 +38,33 @@ mvn clean install
 Ejecuta el Main -DemoApplication
 
 El backend estará disponible en [http://localhost:8080](http://localhost:8080).
+
+
+SCRIPTS: 
+
+INSERT INTO pais (pais) VALUES
+('CO'),
+('AD'),
+('AF'),
+('BR'),
+('CD'),
+('CF'),
+('CG'),
+('KR'),
+('KZ'),
+('LA');
+
+INSERT INTO rol (nombre) VALUES 
+('rector'),
+('estudiante'),
+('profesor')
+
+INSERT INTO persona (nombre,pais_id_pais) 
+VALUES ("Admin", 1)
+
+
+INSERT INTO usuario (usuario,contrasena,persona_id,id_rol)
+VALUES ("Admin", "admin123", 1,1)
 
 
 
