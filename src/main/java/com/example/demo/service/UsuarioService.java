@@ -27,7 +27,7 @@ public class UsuarioService {
         String primerApellido = usuario.getPersona().getApellido().split(" ")[0];
 
         String correoBase = primerNombre.toLowerCase() + "." + primerApellido.toLowerCase();
-        String correoFinal = "";
+        String correoFinal = correoBase + "@fasttrack.com." + (usuario.getPersona().getPais().getPais()).toLowerCase();
 
         int contador = 0;
         List<Usuario> usuarios = iUsuarioRepositorio.findByCorreoStartingWith(correoBase);
